@@ -20,14 +20,11 @@ function fadeIn() {
     }
 };
 
-$('#audioplay').click(() => {
-    let audio = $('#audio')[0];
-    audio.play()
-})
-
 $('#box-body').click(() => {
     setTimeout(() => {
         let audio = $('#audio')[0];
+        audio.loop = true
+        audio.load();
         audio.play()
         document.querySelector("#main").hidden = false
         document.querySelector("#container").hidden = true
@@ -37,6 +34,8 @@ $('#box-body').click(() => {
         fadeIn()
     }, 1200)
 })
+
+
 
 
 
