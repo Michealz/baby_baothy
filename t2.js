@@ -22,7 +22,7 @@ function fadeIn() {
 
 $('#box-body').click(() => {
     setTimeout(() => {
-        let audio = $('#audio')[0];
+        let audio = document.getElementById('audio');
         audio.loop = true
         audio.load();
         audio.play()
